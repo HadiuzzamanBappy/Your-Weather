@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="icon" type="image/png" href="res/img/logo.png">
+    <link rel="stylesheet" href="res/fonts/all.min.css">
+    <link rel="stylesheet" href="res/css/style.css" />
+</head>
+
+<body>
+    <a href="#" data-toggle="theme"><i class="fa fa-moon light"></i><i class="fa fa-sun dark"></i></a>
+    <div class="wrap">
+        <header>
+            <h2>Your Weather</h2>
+            <p>Get instant weather updates for cities worldwide with our real-time weather tracking system</p>
+        </header>
+        <form id="weather-form">
+            <input type="text" id="city-input" placeholder="Enter city name..." required />
+            <button type="submit">Search</button>
+        </form>
+        <main class=" container weather-info" id="weather-info">
+            <!-- Weather data will appear here -->
+        </main>
+
+        <div class="error" id="error-message"></div>
+    </div>
+
+    <footer class="credit">
+        <p class="text-description d-flex justify-content-center align-items-center">2025 &copy; Your-Weather. Created by <a
+                href="https://hadiuzzamanbappy.github.io/" target="_blank" class="fw-medium text-primary"><i
+                    class="fas fa-bold ml-1 text-primary"></i>roTech</a></p>
+    </footer>
+
+    <script src="res/js/theme.js"></script>
+    <script src="res/js/script.js"></script>
+</body>
+
+</html>
