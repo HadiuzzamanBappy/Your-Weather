@@ -57,7 +57,7 @@ form.addEventListener("submit", async (e) => {
 });
 
 // Display the weather data
-function displayWeather(data) {  
+function displayWeather(data) {
   const { name, sys, main, weather, wind } = data;
 
   cityInput.value = name;
@@ -81,19 +81,24 @@ function displayWeather(data) {
   sunriseVal.innerText = `at ${new Date(sys.sunrise * 1000).toLocaleTimeString()}`;
   sunsetVal.innerText = `at ${new Date(sys.sunset * 1000).toLocaleTimeString()}`;
 
-  timezoneVal.innerText = `UTC${(data.timezone/3600 >= 0? '+' : '')}${data.timezone/3600}h`;
+  timezoneVal.innerText = `UTC${(data.timezone / 3600 >= 0 ? '+' : '')}${data.timezone / 3600}h`;
   dateVal.innerText = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
     day: 'numeric',
     month: 'long',
     year: 'numeric'
   });
-// Update time every second
-const updateTime = () => {
-  timeVal.innerText = new Date().toLocaleTimeString();
-};
-updateTime();
-setInterval(updateTime, 1000);
+  // Update time every second
+  const updateTime = () => {
+    timeVal.innerText = new Date().toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
+  };
+  updateTime();
+  setInterval(updateTime, 1000);
 
   weatherInfo.classList.add("active");
   errorMessage.classList.remove("active");
