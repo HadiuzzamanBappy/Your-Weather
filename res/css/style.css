@@ -64,7 +64,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100vh;
   overflow-y: scroll;
   position: relative;
   flex-direction: column;
@@ -126,7 +125,6 @@ p {
   justify-content: start;
   align-items: center;
   gap: 1.25rem;
-  width: 100vw;
   padding: 1rem;
   height: -webkit-fill-available;
   color: var(--text-secondary);
