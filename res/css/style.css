@@ -67,6 +67,7 @@ body {
   overflow-y: scroll;
   position: relative;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 h1 {
@@ -129,6 +130,7 @@ p {
   height: -webkit-fill-available;
   color: var(--text-secondary);
   font-size: small;
+  flex-grow: 1;
 }
 
 @media screen and (min-width: 900px) {
