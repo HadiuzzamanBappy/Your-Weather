@@ -6,6 +6,7 @@ const errorMessage = document.getElementById("error-message");
 const weatherImage = document.getElementById("weather-img");
 const tempValue = document.getElementById("temp-value");
 const feelsLike = document.getElementById("feels-like");
+const cityValMain = document.getElementById("city-val-main");
 const cloudValue = document.getElementById("cloud-val");
 const cloudType = document.getElementById("cloud-type");
 const minVal = document.getElementById("min-val");
@@ -66,6 +67,7 @@ function displayWeather(data) {
     }@2x.png`;
   tempValue.innerHTML = `${Math.round(main.temp)}<span class="text-caption">°C</span>`;
   feelsLike.innerText = `Feels like ${Math.round(main.feels_like)}°C`;
+  cityValMain.innerText = `${name}, ${sys.country}`;
   cloudType.innerText = `${weather[0].description}`;
   cloudValue.innerText = `${data.clouds.all}% Clouds`;
   minVal.innerText = `${Math.round(main.temp_min)}°C`;
