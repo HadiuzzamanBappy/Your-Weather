@@ -2,6 +2,14 @@
 
 A responsive and user-friendly weather application that displays real-time weather data using the OpenWeatherMap API. Users can search for any city's current weather and automatically see weather based on their current location on page load.
 
+## Live Demo & Screenshot
+
+**[➡️ View Live Demo Here](https://your-weather-bro.vercel.app/)**
+
+<br>
+
+![Project Screenshot](/res/img/image.png)
+
 ## Table of Contents
 
 - [Features](#features)
