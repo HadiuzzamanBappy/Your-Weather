@@ -14,23 +14,92 @@
     <a href="#" data-toggle="theme"><i class="fa fa-moon light"></i><i class="fa fa-sun dark"></i></a>
     <div class="wrap">
         <header>
-            <h2>Your Weather</h2>
+            <h1>Your Weather</h1>
             <p>Get instant weather updates for cities worldwide with our real-time weather tracking system</p>
         </header>
         <form id="weather-form">
             <input type="text" id="city-input" placeholder="Enter city name..." required />
             <button type="submit">Search</button>
         </form>
-        <main class=" container weather-info" id="weather-info">
-            <!-- Weather data will appear here -->
+        <main class="container" id="weather-info">
+            <div class="row">
+                <div class="weather">
+                    <div class="left">
+                        <div class="temperature">
+                            <h2 id="temp-value">---</h2>
+                            <span id="feels-like" class="feels text-caption">---</span>
+                        </div>
+                        <div class="cloud">
+                            <span id="cloud-type" class="type">----</span> -
+                            <span id="cloud-val" class="text-caption percent">--%</span>
+                        </div>
+                        <div class="min-max">
+                            <span class="min"><i class="fa fa-temperature-low"></i><span id="min-val">--</span></span>
+                            <span class="max"><i class="fa fa-temperature-high"></i><span id="max-val">--</span></span>
+                        </div>
+                    </div>
+                    <img id="weather-img" src="res/img/logo.png" alt="" width="24">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col air-quality">
+                    <i class="symbol fas fa-wind"></i>
+
+                    <div class="item">
+                        <i class="fas fa-tint"></i>
+                        <span>Humidity: </span>
+                        <span id="humid-val">--%</span>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Pressure: </span>
+                        <span id="air-pressure-val">--</span>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-eye"></i>
+                        <span>Visibility:</span>
+                        <span id="visibility-val">--</span>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-wind"></i>
+                        <span>Speed:</span>
+                        <span id="air-speed-val">--</span>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-compass"></i>
+                        <span>Direction:</span>
+                        <span id="air-direction-val">--</span>
+                    </div>
+                </div>
+                <div class="col location">
+                    <i class="symbol fa fa-location-arrow"></i>
+                    <h2 id="city-val" class="city">---</h2>
+                    <div class="item">
+                        <i class="fas fa-sun"></i> <span id="sunrise">at --:--</span>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-moon"></i> <spn id="sunset">at --:--</spn>
+                    </div>
+                </div>
+                <div class="col time">
+                    <i class="symbol fas fa-clock"></i>
+
+                    <h2 id="time-val">--:-- --</h2>
+                    <h4 id="date-val">--, -- --- ---</h4>
+                    <div class="item timezone">
+                        <i class="fas fa-globe"></i>
+                        <span id="zone-val">---</span>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <div class="error" id="error-message"></div>
     </div>
 
     <footer class="credit">
-        <p class="text-description d-flex justify-content-center align-items-center">2025 &copy; Your-Weather. Created by <a
-                href="https://hadiuzzamanbappy.github.io/" target="_blank" class="fw-medium text-primary"><i
+        <p class="text-description d-flex justify-content-center align-items-center">2025 &copy; Your-Weather. Created
+            by <a href="https://hadiuzzamanbappy.github.io/" target="_blank" class="fw-medium text-primary"><i
                     class="fas fa-bold ml-1 text-primary"></i>roTech</a></p>
     </footer>
 
